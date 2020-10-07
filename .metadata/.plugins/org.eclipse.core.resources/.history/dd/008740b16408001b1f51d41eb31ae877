@@ -1,0 +1,25 @@
+package recusionANDbacktracking;
+
+public class AcodeRecursion {
+
+	public static void main(String[] args) {
+		
+		char ch[]= {'\0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+		
+		int arr[]= {1,2,3,4};
+		
+		char out[]=new char[4];
+		
+	   genearte(arr,ch,out,0);
+		
+		
+	}
+
+	private static void genearte(int[] arr, char[] ch, char[] out, int i) {
+	
+		
+		
+		
+	}
+
+}

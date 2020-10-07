@@ -1,0 +1,39 @@
+package recusionANDbacktracking;
+
+public class ZeroOneKnapsack {
+
+	public static void main(String[] args) {
+		
+		int capacity=7;
+		int weight[]= {1,2,3,5};
+		int price[]= {40,20,35,100};
+		
+		
+		System.out.println(maxprice(capacity,weight,price,0,0));
+
+	}
+
+	static int maxprice(int cap,int[] w, int[] p,int index,int max) {
+		
+		if( index>=w.length) {
+			return max;
+		}
+		
+		if(cap == 0 || cap < w[index] ) {
+			
+			return max;
+			
+		}
+		
+		
+		int a=maxprice(cap-w[index],w,p,index+1,max+p[index]);
+		
+	    int b=maxprice(cap,w,p,index+1,max);
+		
+	    if(a>b) {
+	    	return a;
+	    }
+	    return b;
+	    
+	}
+}

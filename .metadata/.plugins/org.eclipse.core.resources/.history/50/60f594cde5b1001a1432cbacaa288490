@@ -1,0 +1,77 @@
+package collection;
+
+import java.util.*;
+public class MyArrayList {
+
+	public static void main(String[] args) {
+
+//		Pair< String , Integer> p1=new Pair("Aman",067);
+//		Pair< Boolean , Integer> p2=new Pair(true,067);
+		
+		ArrayList<String> arraylist=new ArrayList<>();
+		LinkedList<String> linklist=new LinkedList<>();
+		
+		
+		arraylist.add("aman");
+		arraylist.add("ashu");
+		
+		linklist.add("hello");
+		linklist.add("world");
+		
+		
+		arraylist.addAll(linklist);
+		
+		//ArrayList<String>
+		arraylist.remove("world");// or we can remove using index also.
+		
+	//	System.out.println(arraylist.get(2));
+		
+		arraylist.set(2, "hh");
+		arraylist.add(2, "mishra");
+	
+		//arraylist.clear();
+	 
+		//Object x[]=arraylist.toArray();
+		
+		String temp[]=new String[arraylist.size()];
+		arraylist.toArray(temp);
+		
+		for(String s: temp) {
+			System.out.println(s);
+		}
+		int[] scores= {100,90,90,80,75,60};
+		int[] alice= {50,65,77,90,102};
+		int rank[]=new int[alice.length];
+	      Set<Integer> set=new LinkedHashSet<>();
+	      
+	           for(int i=0;i<scores.length;i++){
+	               set.add(scores[i]);
+	           }
+	           ArrayList<Integer> alist=new ArrayList<>(set);
+	          // System.out.println(alist);
+
+	           for(int i=0;i<alice.length;i++){
+	               int marks=alice[i];
+	               for(int j=0;j<alist.size();j++){
+	                   if(marks>=alist.get(j)){
+	                       rank[i]=j+1;
+	                       break;
+	                   }
+	               }
+	           }
+	           for(int i=0;i<rank.length;i++) {
+	        	   System.out.print(rank[i]+" ");
+	           }
+	           
+	      // System.out.println(set);
+		
+		//System.out.println(arraylist.size());
+	//	System.out.println(arraylist);
+		//System.out.println(x);
+
+
+		
+		
+	}
+
+}

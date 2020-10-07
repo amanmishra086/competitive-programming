@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;firstProject1.BigInteger&apos; to &apos;BigIntegerHackerRankQuestion&apos;&#x0D;&#x0A;- Original project: &apos;firstProject&apos;&#x0D;&#x0A;- Original element: &apos;firstProject1.BigInteger&apos;&#x0D;&#x0A;- Renamed element: &apos;firstProject1.BigIntegerHackerRankQuestion&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BigInteger&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;firstProject1{BigInteger.java[BigInteger" matchStrategy="1" name="BigIntegerHackerRankQuestion" qualified="false" references="true" similarDeclarations="false" stamp="1589125034648" textual="false" version="1.0"/>
+</session>
