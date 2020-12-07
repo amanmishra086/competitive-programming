@@ -17,7 +17,7 @@ public class ReplaceForX {
 			int n=sc.nextInt();
 			long x=sc.nextLong();
 			int p=sc.nextInt();
-			int k=sc.nextInt();
+			int k=sc.nextInt(); 
 			
 			long arr[]=new long[n];
 			for(int i=0;i<n;i++) {

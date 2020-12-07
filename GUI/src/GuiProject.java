@@ -20,6 +20,8 @@ public class GuiProject {
 		JTextField jfield1=new JTextField("enter n1");
 		frame.add(jfield1);
 		
+		
+		
 		JTextField jfield2=new JTextField("enter n2");
 		frame.add(jfield2);
 		

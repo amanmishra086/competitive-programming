@@ -1,0 +1,25 @@
+package recusionANDbacktracking;
+
+import java.util.Arrays;
+
+public class RatInMaze {
+ 
+	public static void main(String[] args) {
+		
+		String maze[]= { "0000",
+						 "00X0",
+						 "000X",
+						 "0X00" };
+		
+		int sol[][]=new int[10][10];
+		Arrays.fill(sol, 0);
+		
+		System.out.println(sol);
+		
+		
+		
+
+	}
+
+	
+}

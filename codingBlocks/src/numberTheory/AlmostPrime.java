@@ -1,5 +1,6 @@
 package numberTheory;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AlmostPrime {
@@ -23,6 +24,7 @@ public class AlmostPrime {
 			}
 			
 		}
+		System.out.println(Arrays.toString(arr));
 		int ans=0;
 		for(int i=0;i<=n;i++) {
 			if(arr[i]==2) {

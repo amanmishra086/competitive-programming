@@ -1,0 +1,73 @@
+package recusionANDbacktracking;
+
+import java.util.Arrays;
+
+public class RatInMaze {
+ 
+	public static void main(String[] args) {
+		
+		String maze[]= { "0000",
+						 "00X0",
+						 "000X",
+						 "0X00" };
+		
+		
+   	     int sol[][]=new int[4][4];
+   	  
+   	    
+//   	 for(int i=0;i<10;i++) {    
+//   		 for(int j=0;j<10;j++) {
+//   			 System.out.print(sol[i][j]+" ");
+//   		 }
+//   		 System.out.println();
+//   	 }
+ 
+   	System.out.println(mazefunction(maze,sol,0,0,4,4));
+   	 
+	}
+
+	static boolean mazefunction(String maze[],int sol[][],int i,int j,int m,int n) {
+		
+		if(i!=m-1 && j>=n-1) {
+			return false;
+		}
+		
+	   if(i==m-1 && j==n-1) {
+		   
+		   for(int x=0;i<10;i++) {    
+		   		 for(int y=0;j<10;j++) {
+		   			 System.out.print(sol[i][j]+" ");
+		   		 }
+		   		 System.out.println();
+		   	 }
+		   
+		   
+		   return true;
+	   }
+	   
+	   
+	   if( maze[i].charAt(j+1)!='X') {
+		   
+		   sol[i][j]=1;
+		   sol[i][j+1]=1;
+		   
+		  return mazefunction(maze,sol,i,j+1,m,n);
+		   
+	   }else if( maze[i+1].charAt(j)!='X') {
+		   
+		   sol[i][j]=1;
+		   sol[i+1][j]=1;
+		   
+		   return mazefunction(maze, sol, i+1, j, m, n);
+		   
+	   }
+	   
+		
+		
+		
+		
+		return false;
+	}
+	
+	
+}

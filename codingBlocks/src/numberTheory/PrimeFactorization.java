@@ -27,7 +27,7 @@ public class PrimeFactorization {
 		Collections.fill(l, 0);
 		primeSieve(l);  //build this sieve once for all query
 		
-		
+		//System.out.println(l);
 		
 		//both are correct
 		// using prime sieve

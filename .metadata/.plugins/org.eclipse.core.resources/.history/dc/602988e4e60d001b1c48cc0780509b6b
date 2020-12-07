@@ -1,0 +1,75 @@
+package recusionANDbacktracking;
+
+import java.util.Arrays;
+
+public class RatInMaze {
+ 
+	public static void main(String[] args) {
+		
+		String maze[]= { "0000",
+						 "00X0",
+						 "000X",
+						 "0X00" };
+		
+		
+   	     int sol[][]=new int[4][4];
+   	  
+   	     int m=4;
+   	     int n=4;
+   	     
+   	     boolean ans=mazefunction(maze,sol,0,0,m,n);
+   	     if(!ans) {
+   	    	 System.out.println("Sol doesn't exist !");
+   	     }
+ 
+
+   	 
+	}
+
+	static boolean mazefunction(String maze[],int sol[][],int i,int j,int m,int n) {
+		
+		
+		
+	   if(i==m-1 && j==n-1) {
+		   sol[i][j]=1;
+		   for(int x=0;i<4;i++) {    
+		   		 for(int y=0;j<4;j++) {
+		   			 System.out.print(sol[i][j]+" ");
+		   		 }
+		   		 System.out.println();
+		   	 }
+		   
+		   
+		   return true;
+	   }
+	   
+	   
+	   if(i>=m || j>=n) {
+		   return false;
+	   }
+	   
+	   if(maze[i].charAt(j)=='X') {
+		   return false;
+	   }
+	   
+	   //asssume the soln exist
+	   
+	   sol[i][j]=1;
+	   
+	   boolean right=mazefunction(maze, sol, i, j+1, m, n);
+	   boolean down=mazefunction(maze, sol, i+1, j, m, n);
+	  
+	   sol[i][j]=0;
+	   
+	   if(right == true && down==true) {
+		   
+		   return true;
+		   
+	   }
+	   
+		
+		return false;
+	}
+	
+	
+}
